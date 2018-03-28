@@ -32,6 +32,8 @@ hist(step_day$daysteps,col=col1[8],main="Histogram of Total Steps taken per day"
 mean(step_day$daysteps,na.rm=T)
 median(step_day$daysteps,na.rm=T)
 ```
+##### mean of total steps taken per day is 10776
+##### median of total steps taken per day is 10765
 
 ### 3 What is the average daily activity pattern?
 #### 3.1 process data and plot daily activity pattern based on interval
@@ -44,12 +46,14 @@ plot(step_int$interval,step_int$intsteps,col=col1[9],main="Average Steps taken p
 ```{r results="asis",cache=TRUE}
 step_int[which.max(step_int$intsteps),"interval"]
 ```
+##### interval contains the maximum number of steps is 835
 
 ### 4 Imputing missing values
 #### 4.1 calculating number of missing values
 ```{r results="asis",cache=TRUE}
 sum(is.na(act$steps))
 ```
+##### total number of missing rows is 2304
 
 #### 4.2 use median of that 5-minute interval to fill in the missing values in the dataset
 ```{r results="asis",cache=TRUE}
